@@ -128,4 +128,10 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps'))
+sys.path.insert(0,os.path.join(BASE_DIR, 'extra_apps')),
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
