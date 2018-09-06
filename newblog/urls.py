@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import IndexView
+from blog.views import IndexView,ArichiveView
 
 import xadmin
 
@@ -23,4 +23,5 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('xadmin/', xadmin.site.urls),
     path('', IndexView.as_view(), name='index'),
+    path('^archive/$', ArichiveView.as_view(), name='archive'),
 ]

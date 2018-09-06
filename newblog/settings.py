@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'xadmin',
     'crispy_forms',
+    'pure_pagination',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+# 设置分页插件的分页数等等
+PAGINATION_SETTINGS = {
+    'PAGE_RANGE_DISPLAYED': 3,    #中间显示的个数
+    'MARGIN_PAGES_DISPLAYED': 2,  #两边显示的个数
+
+    'SHOW_FIRST_PAGE_WHEN_INVALID': True,
+}
